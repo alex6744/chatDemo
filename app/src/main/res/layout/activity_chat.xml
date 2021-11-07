@@ -35,28 +35,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="60dp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btn_image"
+        android:layout_width="107dp"
+        android:layout_height="49dp"
+        android:text="image"
+        app:layout_constraintBottom_toTopOf="@+id/btn_send"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="15dp"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    </ScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/image_view"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/message_view"
+        app:layout_constraintEnd_toStartOf="@+id/btn_image"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
